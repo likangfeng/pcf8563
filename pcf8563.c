@@ -150,7 +150,7 @@ static rt_err_t rt_pcf8563_control(rt_device_t dev, int cmd, void *args)
     switch (cmd)
     {
     	/* read time */
-        case RT_DEVICE_CTRL_RTC_GET_TIME:
+        case RT_DEVICE_CTRL_RTC_GET_TIMEVAL:
 	        time = (time_t *)args;
             ret = pcf8563_read_reg(REG_PCF8563_SEC,buff,7);
 
